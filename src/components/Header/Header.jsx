@@ -1,49 +1,47 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import './Header.scss'
 import { Link } from 'react-router-dom'
 
 const Header = () => {
-  const [isActive, setIsActive]  = useState(false)
+    const [isActive, setIsActive] = useState(false)
+
+    const tooggleBurger = () => {
+        setIsActive(!isActive)
+    }
+
+    const closeBurger = () => {
+        setIsActive(false)
+    }
+    return (
+        <>
+            <header>
+                <div className="container">
+                    <nav className='nav'>
 
 
-  const toggleBurger = () => {
-    setIsActive(!isActive)
-  }
-  return (
-    <>
-    <header className="header">
-        <div className="container">
-            <div className='header__wrapper'>
-              <div className="header__wrap">
-              <div className="header__header">
-              <Link to={'/'}><img className='logo__img' src="/SHOP-CO.png" alt="" /></Link>
-                <div className={`header__menu ${isActive ? 'active' : ''}`}>
-                    <Link to={'/sale'}>On Sale</Link>
-                    <Link to={'/news'}>New Arrivals</Link>
-                    <Link to={'/brands'}>Brands</Link>
-            </div>                
-              </div>
+                        <h1>SHOP.CO</h1>
+                        <div className={`menu ${isActive ? 'active' : ''}`}>
+                            <a href="/#selling">On Sale</a>
+                            <a href="/#arrivals">New arrivals</a>
+                            <Link to={'/contacts'}>Brands</Link>
+                        </div>
 
-            <div onClick={toggleBurger} className={`burger ${isActive ? 'active' : ''}`}>
-                <div className='div'></div>
-                <div className='div'></div>
-                <div className='div'></div>
-            </div>                
-              </div>
+                        <input placeholder='Search for products...' type="text" />
+                        <div>
+                            <img src="/korzinka.svg" alt="" />
+                            <img src="/provil.svg" alt="" />
+                        </div>
 
-                <div className="header__search">
-                  <div className='header__input'>
-                    <img src="/search-icon.svg" alt="" />
-                   <p>Search for products...</p>
-                   </div>
-                  <img src="/icon-1.svg" alt="" />
-                  <img src="/icon-2.svg" alt="" />
+                        <div onClick={tooggleBurger} className={`burger ${isActive ? 'active' : ''}`}>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        
+                    </nav>
                 </div>
-            </div>
-        </div>
-    </header>
-    </>
-  )
+            </header>
+        </>
+    )
 }
 
 export default Header

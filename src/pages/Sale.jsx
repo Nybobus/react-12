@@ -4,7 +4,7 @@ import SaleWrap from '../components/SaleWrap/SaleWrap'
 const Sale = () => {
   return (
     <>
-    <SaleWrap/>
+    <SaleWrap />
     </>
   )
 }

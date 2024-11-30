@@ -1,22 +1,19 @@
 import React from 'react'
 import Hero from '../components/Hero/Hero'
 import Brands from '../components/Brands/Brands'
-import Category from '../components/Category/Category'
-import Dress from '../components/Dress/Dress'
-import Brend from '../components/Brend/Brend'
-import Comet from '../components/Comet/Comet'
+import Cotegory from '../components/Cotegory/Cotegory'
+import DressStyle from '../components/DressStyle/DressStyle'
+
 
 const Home = () => {
   return (
     <>
-    <Hero/>
-    <Brend/>
-    <Brands/>
-    <Category/>
-    <Dress/>
-    <Comet/>
+    <Hero />
+    <Brands />
+    <Cotegory />
+    <DressStyle />
     </>
-    )
+  )
 }
 
 export default Home

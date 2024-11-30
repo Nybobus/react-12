@@ -2,15 +2,9 @@
     font-size: 48px;
     font-weight: 600;
     text-transform: uppercase;
-    color: #000;
-}
-.section__img{
-    display: flex;
-    justify-content: space-between;
+    color: black;
 
-    div{
-        display: flex;
-        align-items: center;
-        gap: 20px;
+    @media (max-width: 1400px) {
+      font-size: 32px;
     }
 }

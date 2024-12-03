@@ -1,7 +1,6 @@
 import React from 'react'
 import './DressStyle.scss'
 import SectionTitle from '../SectionTitle/SectionTitle'
-import './DressStyle'
 
 const DressStyle = () => {
   return (
